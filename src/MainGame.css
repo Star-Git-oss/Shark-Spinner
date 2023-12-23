@@ -1,0 +1,55 @@
+.winner-overlay {
+    background-color: rgba(0, 0, 0, 0.7); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; 
+}
+
+.icons { 
+    width: 148px;
+    height: 426px;
+    overflow: hidden;
+    background: #fff url('assets/tira/tira_v4.png') repeat-y;
+    will-change: backgroundPosition;
+    transition: 0.3s background-position ease-in-out;
+    position: relative;
+}
+
+.slots-box-container {
+    display: flex; 
+    align-items: stretch;
+}
+
+.spinners-container {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch; 
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s transform;
+    width: 80%; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
+    flex-basis: auto; 
+}
+
+.lateral-column-wrapper-left,
+.lateral-column-wrapper-right {
+    background-size: cover;
+    display: flex;  
+    position: relative;
+    align-items: center;  
+    flex-grow: 1; 
+}
+
+.lateral-column-wrapper-left {
+    background: url('assets/tela/esq-lateral.png') no-repeat center center;
+}
+
+.lateral-column-wrapper-right {
+    background: url('assets/tela/dir-lateral.png') no-repeat center center;
+    justify-content: center; 
+}

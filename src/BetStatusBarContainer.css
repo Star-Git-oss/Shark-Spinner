@@ -1,0 +1,33 @@
+.bet-status-bar-container {
+    /* padding: 10px 0; */
+    margin: 10px 0;
+    display: flex; 
+    justify-content: space-between;
+    background-color: inherit;
+}
+
+
+.bet-status-bar-container .col {
+    background-color: #32297B; 
+    border-radius: 10px;   
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    padding: 5px 15px;
+    flex: 1;
+    margin: 0 5px;
+    justify-content: space-between;
+    /* max-width: 150px; */
+}
+
+.bet-status-bar-container .col .svg-inline--fa { 
+    color: gold; 
+}
+
+.bet-status-bar-container .col:first-child {
+    margin-left: 15px; 
+}
+
+.bet-status-bar-container .col:last-child {
+    margin-right: 15px; 
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+        "name": "Attach to Firefox",
+        "port": 6000, 
+        "request": "attach",
+        "host": "localhost",
+        "type": "firefox",
+        "webRoot": "${workspaceFolder}",
+        "url": "http://localhost:3000"
+    }
+  ]
+}

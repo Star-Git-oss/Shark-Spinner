@@ -1,0 +1,33 @@
+@keyframes spinInverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#repeatButton {
+    appearance: none;
+    border: none;
+    background: url('assets/buttons/play-btn.png') no-repeat center center;
+    background-size: 128px 128px;
+    width:  128px;
+    height: 128px;
+    cursor: pointer;
+    animation: spinInverse 6s linear infinite;
+    transform-origin: center;
+}
+
+#repeatButton.desabilitado {
+    background-size: 128px 128px !important;
+    pointer-events: none; 
+    animation: none; 
+    background: url('assets/buttons/play-disabled-btn.png') no-repeat center center;
+}
+
+#repeatButton.autoPlayOn {
+    background-size: 128px 128px !important;
+    animation: none; 
+    background: url('assets/buttons/autospin.png') no-repeat center center;
+}
