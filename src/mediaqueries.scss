@@ -35,9 +35,9 @@
             transform-origin: top center;
             position: absolute;
             top: 48.4%;
-            left: 40%;
+            left: 35%;
             transform: translate(-50%, -50%);
-            scale: 0.8;
+            scale: 0.7;
             width: 100%;
         }
     }
@@ -47,9 +47,9 @@
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 60%;
+            left: 55%;
             transform: translate(-50%, -50%);
-            scale: 1.13;
+            scale: 1.03;
             width: 100%;
         }
     }
@@ -59,9 +59,9 @@
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 69%;
+            left: 64%;
             transform: translate(-50%, -50%);
-            scale: 1.34;
+            scale: 1.24;
             width: 100%;
         }
     }
@@ -71,9 +71,9 @@
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 80%;
+            left: 75%;
             transform: translate(-50%, -50%);
-            scale: 1.59;
+            scale: 1.49;
             width: 100%;
         }
     }
@@ -100,90 +100,24 @@
             transform-origin: top center;
             position: absolute;
             top: 48.4%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-            scale: 0.8;
-            width: 100%;
-        }
-    }
-    
-    @media screen and (max-device-width: 768px) {
-        .parent-container {
-            transform-origin: top center;
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-            scale: 1.13;
-            width: 100%;
-        }
-    }
-    
-    @media screen and (max-device-width: 650px) {
-        .parent-container {
-            transform-origin: top center;
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-            scale: 1.2;
-            width: 100%;
-        }
-    }
-    
-    @media screen and (max-device-width: 550px) {
-        .parent-container {
-            transform-origin: top center;
-            position: absolute;
-            top: 50%;
-            left: 80%;
-            transform: translate(-50%, -50%);
-            scale: 1.59;
-            width: 100%;
-        }
-    }
-}
-
-@media screen and (max-device-height: 765px) {
-
-    @media screen and (min-device-width: 769px) {
-        /* body {
-            background: url('assets/tela/baixo-tela.png') no-repeat center center;
-            background-size: 100% 100%; 
-        } */
-    
-        .container-fluid {
-            margin: 10px auto;
-            height: 626.2px;
-        }
-    
-        .lcontainer {
-            position: relative;
-        }
-    
-        .parent-container {
-            transform-origin: top center;
-            position: absolute;
-            top: 48.4%;
             left: 35%;
             transform: translate(-50%, -50%);
             scale: 0.7;
             width: 100%;
         }
     }
-
+    
     @media screen and (max-device-width: 768px) {
         .parent-container {
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 55%;
             transform: translate(-50%, -50%);
-            scale: 0.9;
+            scale: 1.03;
             width: 100%;
         }
     }
-    
     
     @media screen and (max-device-width: 650px) {
         .parent-container {
@@ -192,7 +126,7 @@
             top: 50%;
             left: 55%;
             transform: translate(-50%, -50%);
-            scale: 1.07;
+            scale: 1.1;
             width: 100%;
         }
     }
@@ -202,15 +136,16 @@
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 60%;
+            left: 75%;
             transform: translate(-50%, -50%);
-            scale: 1.27;
+            scale: 1.49;
             width: 100%;
         }
     }
 }
 
-@media screen and (max-device-height: 669px) {
+@media screen and (max-device-height: 765px) {
+
     @media screen and (min-device-width: 769px) {
         /* body {
             background: url('assets/tela/baixo-tela.png') no-repeat center center;
@@ -242,12 +177,13 @@
             transform-origin: top center;
             position: absolute;
             top: 50%;
-            left: 40%;
+            left: 45%;
             transform: translate(-50%, -50%);
-            scale: 0.77;
+            scale: 0.8;
             width: 100%;
         }
     }
+    
     
     @media screen and (max-device-width: 650px) {
         .parent-container {
@@ -256,7 +192,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            scale: 0.95;
+            scale: 0.97;
             width: 100%;
         }
     }
@@ -268,7 +204,71 @@
             top: 50%;
             left: 55%;
             transform: translate(-50%, -50%);
-            scale: 1.08;
+            scale: 1.17;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-device-height: 669px) {
+    @media screen and (min-device-width: 769px) {
+        /* body {
+            background: url('assets/tela/baixo-tela.png') no-repeat center center;
+            background-size: 100% 100%; 
+        } */
+    
+        .container-fluid {
+            margin: 10px auto;
+            height: 626.2px;
+        }
+    
+        .lcontainer {
+            position: relative;
+        }
+    
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 48.4%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            scale: 0.5;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-device-width: 768px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            scale: 0.67;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 650px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            scale: 0.85;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 550px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            scale: 0.98;
             width: 100%;
         }
     }
