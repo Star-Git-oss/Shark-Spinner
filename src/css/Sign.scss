@@ -8,7 +8,6 @@ $form-content-width : 85%;
     .inbox-signup {
         // background: url('../../SignIn-design.png') no-repeat center center;
         background-color: white;
-        height: 90vh;
         width: 55vh;
         max-width: 90%;
         border-radius: 3vh;
@@ -20,7 +19,16 @@ $form-content-width : 85%;
         // flex-direction: column;
         // justify-content: space-between;
         display: grid;
-        grid-template-rows: 27% 10% 10% 10% 9% 9% 10% 9%;
+    }
+
+    #signin-container {
+        height: 75vh;
+        grid-template-rows: 30% 9% 9% 9% 6% 13% 11% 10%;
+    }
+
+    #signup-container {
+        height: 85vh;
+        grid-template-rows: 27% 8% 8% 8% 8% 5% 12% 10% 9%;
     }
 }
 
@@ -29,12 +37,17 @@ $form-content-width : 85%;
     background-size: 18vh 100%;
     width: 100%;
     height: 18vh;
-    margin-top: 5vh;
+    margin-top: 4vh;
     display: flex;
     justify-content: center;
 }
 
-.signup {
+#signup,
+#signin {
+    margin-top: 5vh;
+}
+
+.sign-container {
     width: $form-content-width;
     height: 5vh;
     border: 0.2vh solid #444444;
@@ -49,7 +62,7 @@ $form-content-width : 85%;
         background-size: 100% 100%;
         width: 3.5vh;
         height: 3.5vh;
-        margin: 0.7vh 2vh 0px 0px;
+        margin: 0.7vh 1vh 0px 0px;
     }
 
     .sign-button {
@@ -64,7 +77,7 @@ $form-content-width : 85%;
 
 .input-container {
     width: 100%;
-    height: 55%;
+    height: 80%;
     display: flex;
     position: relative;
 
@@ -103,6 +116,7 @@ $form-content-width : 85%;
         background: url('../assets/password-logo.PNG') no-repeat right;
         background-size: 2.8vh 2vh;
         margin-right: 0.17vh;
+        cursor: pointer;
     }
 }
 
@@ -115,11 +129,26 @@ $form-content-width : 85%;
         width: 2vh;
         height: 2vh;
         margin-right: 5%;
-        margin-top: 2%;
+        margin-top: 1%;
+        cursor: pointer;
     }
 
     label {
         width: 90%;
-        font-size: 2vh;
+        font-size: 1.7vh;
+        cursor: pointer;
+    }
+}
+
+.navi-sign {
+    display: flex;
+    justify-content: center;
+    font-size: 2vh;
+    margin-top: 1vh;
+
+    .navi {
+        margin-left: 15px;
+        text-decoration: underline;
+        cursor: pointer;
     }
 }

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useSlotMachine from './useSlotMachine';
 import bannerPrincipal from './assets/tela/header-TUBA.gif';
 import MainContent from './pages/MainContent';

@@ -15,13 +15,15 @@ import BetIncreaseBtn from '../components/maincomponents/BetIncreaseBtn';
 import BetDecreaseBtn from '../components/maincomponents/BetDecreaseBtn';
 import AutoPlayBtn    from '../components/maincomponents/AutoPlayBtn';
 import FastPlayBtn    from '../components/maincomponents/FastPlayBtn';
-import { FontAwesomeIcon }             
+import { FontAwesomeIcon }
     from '@fortawesome/react-fontawesome';
 import { faWallet, faCoins, faTrophy } 
     from '@fortawesome/free-solid-svg-icons';
 
 import BetDisplayOverlay from '../components/maincomponents/BetDisplayOverlay';  
 import LineOverlay       from '../components/maincomponents/LineOverlay'; 
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function MainContent({
     winner, 
@@ -44,6 +46,15 @@ function MainContent({
     handleAutoPlay,
     autoPlayOn
 }) {
+
+    const navigate = useNavigate();
+    useEffect(() => {
+        console.log(localStorage.getItem('isLoggedIn'));
+        if (localStorage.getItem('isLoggedIn') == false || localStorage.getItem('isLoggedIn') == null) {
+            navigate('/signin');
+        }
+    }, [localStorage.getItem('isLoggedIn')]);
+
     return (
         <div className="container-fluid">
             {/* <Navbar /> */}
