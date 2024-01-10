@@ -1,0 +1,9 @@
+.bet-bar-container {
+    background-color: #4646AF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden; 
+    color: #fff;
+    background: url('../assets/tela/status-bar.png') center no-repeat;
+    background-size: 100% 100%; 
+}
+

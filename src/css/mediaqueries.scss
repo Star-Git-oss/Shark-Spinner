@@ -1,0 +1,275 @@
+.lcontainer {
+    position: relative;
+}
+
+.container-fluid {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* scale: 1.2; */
+    width: 580px;
+    /* height: 100%; */
+    /* height: 586.2px; */
+}
+
+@media screen and (min-device-height: 840px) {
+
+    @media screen and (min-device-width: 769px) {
+        /* body {
+            background: url('assets/tela/baixo-tela.png') no-repeat center center;
+            background-size: 100% 100%; 
+        } */
+    
+        .container-fluid {
+            margin: 10px auto;
+            height: 626.2px;
+        }
+    
+        .lcontainer {
+            position: relative;
+        }
+    
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 48.4%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            scale: 0.7;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 768px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            scale: 1.03;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 650px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 64%;
+            transform: translate(-50%, -50%);
+            scale: 1.24;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 550px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            scale: 1.49;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-device-height: 840px) {
+
+    @media screen and (min-device-width: 769px) {
+        /* body {
+            background: url('assets/tela/baixo-tela.png') no-repeat center center;
+            background-size: 100% 100%; 
+        } */
+    
+        .container-fluid {
+            margin: 10px auto;
+            height: 626.2px;
+        }
+    
+        .lcontainer {
+            position: relative;
+        }
+    
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 48.4%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            scale: 0.7;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 768px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            scale: 1.03;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 650px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            scale: 1.1;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 550px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            scale: 1.49;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-device-height: 765px) {
+
+    @media screen and (min-device-width: 769px) {
+        /* body {
+            background: url('assets/tela/baixo-tela.png') no-repeat center center;
+            background-size: 100% 100%; 
+        } */
+    
+        .container-fluid {
+            margin: 10px auto;
+            height: 626.2px;
+        }
+    
+        .lcontainer {
+            position: relative;
+        }
+    
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 48.4%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            scale: 0.6;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-device-width: 768px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            scale: 0.8;
+            width: 100%;
+        }
+    }
+    
+    
+    @media screen and (max-device-width: 650px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            scale: 0.97;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 550px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            scale: 1.17;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-device-height: 669px) {
+    @media screen and (min-device-width: 769px) {
+        /* body {
+            background: url('assets/tela/baixo-tela.png') no-repeat center center;
+            background-size: 100% 100%; 
+        } */
+    
+        .container-fluid {
+            margin: 10px auto;
+            height: 626.2px;
+        }
+    
+        .lcontainer {
+            position: relative;
+        }
+    
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 48.4%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            scale: 0.5;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-device-width: 768px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            scale: 0.67;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 650px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            scale: 0.85;
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-device-width: 550px) {
+        .parent-container {
+            transform-origin: top center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            scale: 0.98;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.lateral-column-wrapper-left {
+    background: url('assets/tela/esq-lateral.png') no-repeat center center;
+    background-size: cover;
+    display: flex;  
+    position: relative;
+    align-items: center;  
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+.lateral-column-wrapper-right {
+    background: url('assets/tela/dir-lateral.png') no-repeat center center;
+    background-size: cover;
+    display: flex;  
+    position: relative;
+    align-items: center;  
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+
+/* 
+.line-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+.line-number-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DAA520;
+    color: red;
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1;
+    font-weight: bold;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-size: 2rem;
+  } */

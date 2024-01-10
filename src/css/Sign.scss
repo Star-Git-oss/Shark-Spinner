@@ -1,0 +1,124 @@
+$form-content-width : 85%;
+
+.container-signup {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    .inbox-signup {
+        // background: url('../../SignIn-design.png') no-repeat center center;
+        background-color: white;
+        height: 90vh;
+        width: 55vh;
+        max-width: 90%;
+        border-radius: 3vh;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-rows: 27% 10% 10% 10% 9% 9% 10% 9%;
+    }
+}
+
+.logo {
+    background: url('../assets/LOGO_transparente.png') no-repeat center;
+    background-size: 18vh 100%;
+    width: 100%;
+    height: 18vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.signup {
+    width: $form-content-width;
+    height: 5vh;
+    border: 0.2vh solid #444444;
+    border-radius: 1.5vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    .google {
+        background: url('../assets/google-logo.png') no-repeat center;
+        background-size: 100% 100%;
+        width: 3.5vh;
+        height: 3.5vh;
+        margin: 0.7vh 2vh 0px 0px;
+    }
+
+    .sign-button {
+        height: 90%;
+        padding-top: 3px;
+        background-color: initial;
+        color: #000;
+        font-size: 2.3vh;
+        text-align: center;
+    }
+}
+
+.input-container {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    position: relative;
+
+    .input-box {
+        width: $form-content-width;
+        height: 100%;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid grey;
+        border-radius: 1vh;
+        font-size: 2vh;
+        font-family: Arial;
+    }
+
+    .input-log {
+        position: absolute;
+        right: 9%;
+        width: 10%;
+        height: 100%;
+    }
+
+    .name {
+        background: url('../assets/name-logo.PNG') no-repeat right;
+        background-size: 2.5vh 2.5vh;
+        margin-right: 7px;
+    }
+
+    .email {
+        background: url('../assets/email-logo.PNG') no-repeat right;
+        background-size: 3vh 2.5vh;
+        margin-right: 5px;
+    }
+
+    .password {
+        background: url('../assets/password-logo.PNG') no-repeat right;
+        background-size: 2.8vh 2vh;
+        margin-right: 5px;
+    }
+}
+
+.confirm-container {
+    display: flex;
+    width: $form-content-width;
+    margin: auto;
+
+    input {
+        width: 2vh;
+        height: 2vh;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+    label {
+        width: 90%;
+        font-size: 2vh;
+    }
+}

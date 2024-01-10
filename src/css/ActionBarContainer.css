@@ -1,0 +1,135 @@
+.action-bar-container {
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 195px; 
+    background: url('../assets/tela/baixo-tela.png') center no-repeat;
+    background-size: 100% 100%;
+    margin-top: -5px;
+}
+
+#fastPlayBtn {
+    display: inline-flex;
+    align-items:     top;
+    justify-content: center;
+    position: relative;
+    width:  65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    color: gold;
+    background-color: inherit;
+    box-shadow: 0 0 5px gold;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    margin-right: -15px;
+    margin-top:   -50px;
+    font-size:    180%;
+}
+
+#fastPlayBtn::after {
+    content: "TURBO"; 
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:   gold;
+    font-size: 0.4em; 
+    z-index: 1;
+}
+
+
+#fastPlayBtn:hover {
+    box-shadow: 0 0 10px gold;
+}
+
+#betDecreaseBtn {
+    display: inline-flex;   
+    align-items: center;    
+    justify-content: center;
+    width:  50px;            
+    height: 50px;           
+    border-radius: 50%;     
+    border: 2px solid gold;
+    color: gold;               
+    background-color: inherit;  
+    box-shadow: 0 0 5px gold;   
+    cursor: pointer;            
+    transition: box-shadow 0.3s;
+    margin-right: 15px;
+    margin-top:   60px;
+}
+
+#betDecreaseBtn:hover {
+    box-shadow: 0 0 10px gold;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#betIncreaseBtn {
+    display: inline-flex;   
+    align-items: center;    
+    justify-content: center;
+    width:  50px;            
+    height: 50px;           
+    border-radius: 50%;     
+    border: 2px solid gold;
+    color: gold;               
+    background-color: inherit;  
+    box-shadow: 0 0 5px gold;   
+    cursor: pointer;            
+    transition: box-shadow 0.3s;
+    margin-left: 15px;
+    margin-top:  60px;
+}
+
+#betIncreaseBtn:hover {
+    box-shadow: 0 0 10px gold;
+}
+
+#autoPlayBtn {
+    display: inline-flex;   
+    align-items:     top;    
+    justify-content: center;
+    position: relative; 
+    width:  65px;            
+    height: 65px;           
+    border-radius: 50%;     
+    border: 2px solid gold;
+    color: gold;               
+    background-color: inherit;  
+    box-shadow: 0 0 5px gold;   
+    cursor: pointer;            
+    transition: box-shadow 0.3s;
+    margin-left: -15px;
+    margin-top:  -50px;
+    font-size:   180%;
+}
+
+#autoPlayBtn::after {
+    content: "AUTO"; /* O texto a ser exibido */
+    position: absolute;
+    top:  75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gold; 
+    font-size: 0.5em; 
+    z-index: 1;
+}
+
+#autoPlayBtn:hover {
+    box-shadow: 0 0 10px gold;
+}
+
+

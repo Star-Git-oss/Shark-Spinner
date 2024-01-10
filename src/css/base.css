@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: url('../assets/tela/wallpaper.png') no-repeat center center;
+  background-size: 110% 110%;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+  
+* { box-sizing: border-box; }
+
+.container-fluid {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:  580px; 
+  /* height: 586.2px; */
+}
+
+/* 
+.parent-container {
+  transform: scale(.58, .58);
+  transform-origin: top center;
+  position: relative;
+  width:  100%; 
+} */
+
+
+.gif-container {
+  height: 200px;
+}
+  
+.gif-container img {
+  width: 100%;       /* Faz a imagem ocupar toda a largura do contêiner pai */
+  height: 100%;      /* Faz a imagem ocupar toda a altura do contêiner pai */
+  object-fit: cover; /* Garante que a imagem cubra o contêiner pai sem distorcê-la */
+  display: block;    /* Remove o espaço em branco abaixo da imagem */
+  margin: auto;      /* Centraliza a imagem */
+}
