@@ -1,8 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/base.css';
 import '../css/Sign.scss';
+import { useState } from 'react';
 
 const SignUp = () => {
+
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const handleClick = () => {
+        setPasswordVisible(!passwordVisible);
+    }
+
     return (
         <div className="container-signup">
             <div className='inbox-signup'>
@@ -16,8 +24,8 @@ const SignUp = () => {
                     <div className='input-log email' />
                 </div>
                 <div className='input-container'>
-                    <input type='password' className='input-box' placeholder='Enter your password' />
-                    <div className='input-log password' />
+                    <input type={passwordVisible ? 'text' : 'password'} className='input-box' placeholder='Enter your password' />
+                    <div className='input-log password' onClick={handleClick}/>
                 </div>
                 <div className='confirm-container policy'>
                     <input type='checkbox' id='policy' value='policy' />

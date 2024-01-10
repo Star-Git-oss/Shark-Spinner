@@ -82,26 +82,27 @@ $form-content-width : 85%;
     .input-log {
         position: absolute;
         right: 9%;
-        width: 10%;
-        height: 100%;
+        width: 6%;
+        height: 70%;
+        margin-top: 0.8vh;
     }
 
     .name {
         background: url('../assets/name-logo.PNG') no-repeat right;
         background-size: 2.5vh 2.5vh;
-        margin-right: 7px;
+        margin-right: 0.3vh;
     }
 
     .email {
         background: url('../assets/email-logo.PNG') no-repeat right;
         background-size: 3vh 2.5vh;
-        margin-right: 5px;
+        margin-right: 0.2vh;
     }
 
     .password {
         background: url('../assets/password-logo.PNG') no-repeat right;
         background-size: 2.8vh 2vh;
-        margin-right: 5px;
+        margin-right: 0.17vh;
     }
 }
 
