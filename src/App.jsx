@@ -39,29 +39,32 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={
-          <MainContent
-            bannerPrincipal={bannerPrincipal}
-            betAmount={betAmount}
-            hasPlayed={hasPlayed}
-            walletAmount={walletAmount}
-            totalWinnings={totalWinnings}
-            finishHandler={finishHandler}
-            handleDecreaseBet={handleDecreaseBet}
-            handleSpin={handleSpin}
-            handleIncreaseBet={handleIncreaseBet}
-            winner={winner}
-            hasCheated={0}
-            forcedSymbol={CHOSEN_INDEX}
-            winnerIndexesPosArr={winnerIndexesPosArr}
-            winnerIndexesSymbolsArr={winnerIndexesSymbolsArr}
-            actualPayout={actualPayout}
-            spinnerRefs={spinnerRefs}
-            affiliate={affiliate}
-            handleAutoPlay={handleAutoPlay}
-            autoPlayOn={autoPlayOn}
-          />
-        } />
+        <Route
+          path="/"
+          element={
+            <MainContent
+              bannerPrincipal={bannerPrincipal}
+              betAmount={betAmount}
+              hasPlayed={hasPlayed}
+              walletAmount={walletAmount}
+              totalWinnings={totalWinnings}
+              finishHandler={finishHandler}
+              handleDecreaseBet={handleDecreaseBet}
+              handleSpin={handleSpin}
+              handleIncreaseBet={handleIncreaseBet}
+              winner={winner}
+              hasCheated={0}
+              forcedSymbol={CHOSEN_INDEX}
+              winnerIndexesPosArr={winnerIndexesPosArr}
+              winnerIndexesSymbolsArr={winnerIndexesSymbolsArr}
+              actualPayout={actualPayout}
+              spinnerRefs={spinnerRefs}
+              affiliate={affiliate}
+              handleAutoPlay={handleAutoPlay}
+              autoPlayOn={autoPlayOn}
+            />
+          }
+        />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
