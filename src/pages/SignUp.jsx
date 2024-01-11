@@ -51,10 +51,10 @@ const SignUp = () => {
                 <div className='sign-container' id='signup'>
                     <p className='sign-button'>Sign up</p>
                 </div>
-                <div className='sign-container'>
+                {/* <div className='sign-container'>
                     <div className='button google' />
                     <p className='sign-button'>Sign up with Google</p>
-                </div>
+                </div> */}
                 <div className='navi-sign'>
                     <p className='ques'>Already have an account?</p>
                     <p className='navi' onClick={navigateSignClick}>Sign in</p>
