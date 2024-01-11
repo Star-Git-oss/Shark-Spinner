@@ -11,6 +11,7 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const handlePasswordClick = () => {
         setPasswordVisible(!passwordVisible);
@@ -33,6 +34,10 @@ const SignUp = () => {
                 </div>
                 <div className='input-container'>
                     <input type={passwordVisible ? 'text' : 'password'} className='input-box' placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <div className='input-log password' onClick={handlePasswordClick}/>
+                </div>
+                <div className='input-container'>
+                    <input type={passwordVisible ? 'text' : 'password'} className='input-box' placeholder='Confirm your password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                     <div className='input-log password' onClick={handlePasswordClick}/>
                 </div>
                 <div className='confirm-container policy'>

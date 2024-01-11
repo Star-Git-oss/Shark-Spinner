@@ -49,7 +49,6 @@ function MainContent({
 
     const navigate = useNavigate();
     useEffect(() => {
-        console.log(localStorage.getItem('isLoggedIn'));
         if (localStorage.getItem('isLoggedIn') == false || localStorage.getItem('isLoggedIn') == null) {
             navigate('/signin');
         }

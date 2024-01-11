@@ -4,31 +4,29 @@ $form-content-width : 85%;
     position: relative;
     width: 100vw;
     height: 100vh;
+    transition: 1s;
 
     .inbox-signup {
-        // background: url('../../SignIn-design.png') no-repeat center center;
         background-color: white;
-        width: 55vh;
+        width: 50vh;
         max-width: 90%;
         border-radius: 3vh;
         position: absolute;
         transform: translate(-50%, -50%);
         left: 50%;
         top: 50%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         display: grid;
     }
 
     #signin-container {
         height: 75vh;
-        grid-template-rows: 30% 9% 9% 9% 6% 13% 11% 10%;
+        // grid-template-rows: 30% 9% 9% 9% 6% 13% 11% 10%;
+        grid-template-rows: 30% 9% 6% 13% 11% 10%;
     }
 
     #signup-container {
         height: 85vh;
-        grid-template-rows: 27% 8% 8% 8% 8% 5% 12% 10% 9%;
+        grid-template-rows: 27% 8% 8% 8% 8% 8% 3% 12% 10% 8%;
     }
 }
 
