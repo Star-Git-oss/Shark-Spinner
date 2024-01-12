@@ -4,7 +4,6 @@ $form-content-width : 85%;
     position: relative;
     width: 100vw;
     height: 100vh;
-    transition: 1s;
 
     .inbox-signup {
         background-color: white;
@@ -19,14 +18,14 @@ $form-content-width : 85%;
     }
 
     #signin-container {
-        height: 65vh;
+        height: 60vh;
         // grid-template-rows: 30% 9% 9% 9% 6% 13% 11% 10%;
-        grid-template-rows: 35% 12% 12% 16% 14% 10%;
+        grid-template-rows: 38% 12% 12% 20% 18%;
     }
 
     #signup-container {
-        height: 90vh;
-        grid-template-rows: 25% 7% 7% 7% 7% 8% 5% 11% 10% 8%;
+        height: 82vh;
+        grid-template-rows: 28% 7.5% 7.5% 7.5% 7.5% 8% 5.5% 14%;
     }
 }
 
@@ -80,7 +79,7 @@ $form-content-width : 85%;
     transform: translate(-50%, -50%);
     left: 50%;
     color: red;
-    bottom: 35%;
+    bottom: 32%;
 }
 
 .input-container {
@@ -115,7 +114,7 @@ $form-content-width : 85%;
     .input-log {
         position: absolute;
         right: 9%;
-        width: 6%;
+        width: 7.5%;
         height: 70%;
         margin-top: 0.8vh;
     }
