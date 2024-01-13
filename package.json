@@ -27,8 +27,8 @@
     "start": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "npm start",
-    "server": "npm run server --prefix ./server",
-    "build": "react-scripts build",
+    "server": "npm start --prefix ./server",
+    "build": "concurrently \"npm run server\" \"npm run client\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
