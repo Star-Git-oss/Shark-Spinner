@@ -3,6 +3,9 @@ import '../css/base.css';
 import '../css/Sign.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signin } from '../action/auth';
+import { useDispatch } from 'react-redux';
+import { setProfile } from '../features/authSlice';
 
 const SignIn = () => {
 
@@ -12,6 +15,7 @@ const SignIn = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handlePasswordClick = () => {
     setPasswordVisible(!passwordVisible);
@@ -21,22 +25,27 @@ const SignIn = () => {
   }
   const signinClick = () => {
     console.log("email & password", email, password);
-    if (email == "12345" && password == "12345") {
-      localStorage.setItem('isLoggedIn', true);
-      navigate('/');
+    if (email.length > 0 && password.length > 0) {
+      dispatch(signin({ email: email, password: password }))
+        .then(res => {
+          dispatch(setProfile({email: email, password: password}));
+          navigate('/')
+        })
+        .catch(err => {
+          setIsEmailValid(false);
+          setIsPasswordValid(false);
+        })
     }
     else {
-      setEmail('');
-      setPassword('');
       setIsEmailValid(false);
       setIsPasswordValid(false);
     }
   }
   useEffect(() => {
-    if(email.length > 0) setIsEmailValid(true);
+    if (email.length > 0) setIsEmailValid(true);
   }, [email])
   useEffect(() => {
-    if(password.length > 0) setIsPasswordValid(true);
+    if (password.length > 0) setIsPasswordValid(true);
   }, [password])
 
   return (

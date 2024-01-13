@@ -33,8 +33,11 @@ const App = () => {
     handleSpin,
     spinnerRefs,
     handleAutoPlay,
+    handleOpenWallet,
     autoPlayOn
   } = useSlotMachine();
+
+  localStorage.setItem('isLoggedIn', false);
 
   return (
     <>
@@ -61,6 +64,7 @@ const App = () => {
               spinnerRefs={spinnerRefs}
               affiliate={affiliate}
               handleAutoPlay={handleAutoPlay}
+              handleOpenWallet={handleOpenWallet}
               autoPlayOn={autoPlayOn}
             />
           }

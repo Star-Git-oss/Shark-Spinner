@@ -7,7 +7,7 @@ html, body {
 
 body {
   background: url('../assets/tela/wallpaper.png') no-repeat center center;
-  background-size: 110% 110%;
+  background-size: 100vw 102vh;
   touch-action: manipulation;
   overflow: hidden;
 }

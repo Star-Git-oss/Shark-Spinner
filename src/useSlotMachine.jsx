@@ -1,26 +1,28 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { TOTAL_ICONS, WILD_INDEX, symbolsPayouts } from './constants';
+import { useDispatch, useSelector } from 'react-redux';
+import { openWalletAmount } from './action/auth';
 
 function useSlotMachine() {
+
   // States
   const [winner, setWinner] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
-  const [walletAmount, setWalletAmount] = useState(10);
   const [betAmount, setBetAmount] = useState(3.00);
   const [actualPayout, setActualPayout] = useState(null);
   const [totalWinnings, setTotalWinnings] = useState(0);
   const [winnerSymbolPayout, setWinnerSymbolPayout] = useState(null);
   const [winnerIndexesPosArr, setWinnerIndexesPosArr] = useState([]);
-  const [winnerIndexesSymbolsArr, setWinnerIndexesSymbolsArr]
-    = useState([]);
+  const [winnerIndexesSymbolsArr, setWinnerIndexesSymbolsArr] = useState([]);
   const [autoPlayOn, setAutoPlayOn] = useState(false);
   const [autoTriggerSpin, setAutoTriggerSpin] = useState(false);
 
+  const [walletAmount, setWalletAmount] = useState(-101);
+  const dispatch = useDispatch();
+
   // Refs
-  const matches
-    = useRef([null, null, null]);
-  const spinnerRefs
-    = useRef([React.createRef(), React.createRef(), React.createRef()]);
+  const matches = useRef([null, null, null]);
+  const spinnerRefs = useRef([React.createRef(), React.createRef(), React.createRef()]);
 
   useEffect(() => {
     if (autoPlayOn && (winner !== null) && walletAmount >= betAmount) {
@@ -138,7 +140,7 @@ function useSlotMachine() {
   }, []);
 
   const handleAutoPlay = useCallback(() => {
-    setAutoPlayOn(currentState => (!currentState && walletAmount >= betAmount));
+    setAutoPlayOn(currentState => (!currentState));
   }, []);
 
   const handleSpin = useCallback((isAutoPlayBtnPressed) => {
@@ -186,6 +188,16 @@ function useSlotMachine() {
     setBetAmount(prevBet => Math.max(prevBet - 1.50, 1.50));
   }, []);
 
+  const handleOpenWallet = useCallback((email) => {
+    dispatch(openWalletAmount({ email: email }))
+      .then(res => {
+        console.log("useSlotMachine openWalletAmount", res);
+        // walletAmount.toFixed(res.walletAmount);
+        if (res)
+          setWalletAmount(Number(res.walletAmount));
+      });
+  }, []);
+
   useEffect(() => {
     if (winner) {
       const localActualPayout = winnerSymbolPayout * betAmount;
@@ -221,6 +233,7 @@ function useSlotMachine() {
     spinnerRefs,
     handleSpin,
     handleAutoPlay,
+    handleOpenWallet,
     autoPlayOn
   };
 }

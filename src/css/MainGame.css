@@ -1,14 +1,14 @@
 .winner-overlay {
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2; 
+    z-index: 2;
 }
 
-.icons { 
+.icons {
     width: 148px;
     height: 426px;
     overflow: hidden;
@@ -19,30 +19,30 @@
 }
 
 .slots-box-container {
-    display: flex; 
+    display: flex;
     align-items: stretch;
 }
 
 .spinners-container {
     display: flex;
-    justify-content: center; 
-    align-items: stretch; 
+    justify-content: center;
+    align-items: stretch;
     position: relative;
     overflow: hidden;
     transition: 0.3s transform;
-    width: 80%; 
-    flex-grow: 0; 
-    flex-shrink: 0; 
-    flex-basis: auto; 
+    width: 80%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
 .lateral-column-wrapper-left,
 .lateral-column-wrapper-right {
     background-size: cover;
-    display: flex;  
+    display: flex;
     position: relative;
-    align-items: center;  
-    flex-grow: 1; 
+    align-items: center;
+    flex-grow: 1;
 }
 
 .lateral-column-wrapper-left {
@@ -51,5 +51,46 @@
 
 .lateral-column-wrapper-right {
     background: url('../assets/tela/dir-lateral.png') no-repeat center center;
-    justify-content: center; 
+    justify-content: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 1.7vh;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alert-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.alert {
+    padding: 20px;
+    font-size: 1.7vh;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    padding: 20px;
+    font-size: 1.7vh;
+    background-color: #04AA6D;
+    color: white;
+    opacity: 1;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert-hidden {
+    visibility: hidden;
 }

@@ -23,7 +23,8 @@ import { faWallet, faCoins, faTrophy }
 import BetDisplayOverlay from '../components/maincomponents/BetDisplayOverlay';
 import LineOverlay from '../components/maincomponents/LineOverlay';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function MainContent({
     winner,
@@ -44,137 +45,159 @@ function MainContent({
     hasCheated,
     forcedSymbol,
     handleAutoPlay,
+    handleOpenWallet,
     autoPlayOn
 }) {
 
-    // useEffect(() => {
-    //     if (walletAmount <= betAmount) {
-    //         handleAutoPlay();
-    //     }
-    // }, [walletAmount]);
-
     const navigate = useNavigate();
+    const { name, email, password } = useSelector((state) => state.auth.profile);
+    const [successShow, setSuccessShow] = useState(true);
+    const [alertShow, setAlertShow] = useState(false);
+
     useEffect(() => {
-        if (localStorage.getItem('isLoggedIn') == false || localStorage.getItem('isLoggedIn') == null) {
+        if (email == '' || email == undefined || password == '' || password == undefined)
             navigate('/signin');
-        }
-    }, [localStorage.getItem('isLoggedIn')]);
+        else
+            handleOpenWallet(email);
+    }, []);
+    useEffect(() => {
+        if (walletAmount < betAmount && walletAmount > 0) setAlertShow(true);
+        else setAlertShow(false);
+    }, [walletAmount]);
+    const handleSuccessClose = (e) => {
+        setSuccessShow(false);
+    }
+    const handleAlertClose = () => {
+        setAlertShow(false);
+    }
 
     return (
-        <div className="container-fluid">
-            {/* <Navbar /> */}
-            {/* {winner === true && <WinningSound />} */}
-            <div className="lcontainer row h-100 align-items-center justify-content-center">
-                <div className="parent-container">
-                    <div className="gif-container">
-                        <img src={bannerPrincipal} />
-                    </div>
+        <>
+            <div className="container-fluid">
+                {/* <Navbar /> */}
+                {/* {winner === true && <WinningSound />} */}
+                <div className="lcontainer row h-100 align-items-center justify-content-center">
+                    <div className="parent-container">
+                        <div className="gif-container">
+                            <img src={bannerPrincipal} />
+                        </div>
 
-                    <div className="slots-box-container" >
-                        <div className="lateral-column-wrapper-left"></div>
-                        <div className="spinners-container">
-                            {winner && <div className="winner-overlay"></div>}
-                            {/* {winner && <LineOverlay 
+                        <div className="slots-box-container" >
+                            <div className="lateral-column-wrapper-left"></div>
+                            <div className="spinners-container">
+                                {winner && <div className="winner-overlay"></div>}
+                                {/* {winner && <LineOverlay 
                                 yPosition={1} 
                                 slopeDegree={45} />
                             } */}
 
-                            <Spinner
-                                id={0}
-                                timer="950"
-                                ref={spinnerRefs.current[0]}
-                                hasPlayed={hasPlayed}
-                                onFinish={finishHandler}
-                                hasCheated={hasCheated}
-                                forcedSymbol={forcedSymbol + 1}
-                                showOverlay={winner}
-                                overlayIdx={winnerIndexesPosArr[0]}
-                                overlaySymbolIdx={winnerIndexesSymbolsArr[0]}
-                            />
+                                <Spinner
+                                    id={0}
+                                    timer="950"
+                                    ref={spinnerRefs.current[0]}
+                                    hasPlayed={hasPlayed}
+                                    onFinish={finishHandler}
+                                    hasCheated={hasCheated}
+                                    forcedSymbol={forcedSymbol + 1}
+                                    showOverlay={winner}
+                                    overlayIdx={winnerIndexesPosArr[0]}
+                                    overlaySymbolIdx={winnerIndexesSymbolsArr[0]}
+                                />
 
-                            <Spinner
-                                id={1}
-                                timer="1050"
-                                ref={spinnerRefs.current[1]}
-                                hasPlayed={hasPlayed}
-                                onFinish={finishHandler}
-                                hasCheated={hasCheated}
-                                forcedSymbol={forcedSymbol}
-                                showOverlay={winner}
-                                overlayIdx={winnerIndexesPosArr[1]}
-                                overlaySymbolIdx={winnerIndexesSymbolsArr[1]}
-                                actualPayout={actualPayout}
-                            />
+                                <Spinner
+                                    id={1}
+                                    timer="1050"
+                                    ref={spinnerRefs.current[1]}
+                                    hasPlayed={hasPlayed}
+                                    onFinish={finishHandler}
+                                    hasCheated={hasCheated}
+                                    forcedSymbol={forcedSymbol}
+                                    showOverlay={winner}
+                                    overlayIdx={winnerIndexesPosArr[1]}
+                                    overlaySymbolIdx={winnerIndexesSymbolsArr[1]}
+                                    actualPayout={actualPayout}
+                                />
 
-                            <Spinner
-                                id={2}
-                                timer="900"
-                                ref={spinnerRefs.current[2]}
-                                hasPlayed={hasPlayed}
-                                onFinish={finishHandler}
-                                hasCheated={hasCheated}
-                                forcedSymbol={forcedSymbol}
-                                showOverlay={winner}
-                                overlayIdx={winnerIndexesPosArr[2]}
-                                overlaySymbolIdx={winnerIndexesSymbolsArr[2]}
-                            />
+                                <Spinner
+                                    id={2}
+                                    timer="900"
+                                    ref={spinnerRefs.current[2]}
+                                    hasPlayed={hasPlayed}
+                                    onFinish={finishHandler}
+                                    hasCheated={hasCheated}
+                                    forcedSymbol={forcedSymbol}
+                                    showOverlay={winner}
+                                    overlayIdx={winnerIndexesPosArr[2]}
+                                    overlaySymbolIdx={winnerIndexesSymbolsArr[2]}
+                                />
+                            </div>
+                            <div className="lateral-column-wrapper-right"></div>
                         </div>
-                        <div className="lateral-column-wrapper-right"></div>
-                    </div>
 
-                    <div className="bet-bar-container">
-                        <div className="bet-header-bar-container">
-                            {winner && <BetDisplayOverlay />}
+                        <div className="bet-bar-container">
+                            <div className="bet-header-bar-container">
+                                {winner && <BetDisplayOverlay />}
 
-                            {!winner && (
-                                <div className="scrolling-text">
-                                    Jogue Shark Win para ganhar diversos prêmios!
+                                {!winner && (
+                                    <div className="scrolling-text">
+                                        Jogue Shark Win para ganhar diversos prêmios!
+                                    </div>
+                                )}
+
+                                {(winner && actualPayout) && (
+                                    <div className="winner-text">
+                                        {"Ganhou " + actualPayout.toFixed(2)}
+                                    </div>
+                                )}
+                            </div>
+                            <div className="bet-status-bar-container">
+                                <div className="col">
+                                    <FontAwesomeIcon icon={faWallet} /> {walletAmount.toFixed(2)}
                                 </div>
-                            )}
-
-                            {(winner && actualPayout) && (
-                                <div className="winner-text">
-                                    {"Ganhou " + actualPayout.toFixed(2)}
+                                <div className="col">
+                                    <FontAwesomeIcon icon={faCoins} /> {betAmount.toFixed(2)}
                                 </div>
-                            )}
-                        </div>
-                        <div className="bet-status-bar-container">
-                            <div className="col">
-                                <FontAwesomeIcon icon={faWallet} /> {walletAmount.toFixed(2)}
-                            </div>
-                            <div className="col">
-                                <FontAwesomeIcon icon={faCoins} /> {betAmount.toFixed(2)}
-                            </div>
-                            <div className="col">
-                                <FontAwesomeIcon icon={faTrophy} /> {totalWinnings.toFixed(2)}
+                                <div className="col">
+                                    <FontAwesomeIcon icon={faTrophy} /> {totalWinnings.toFixed(2)}
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="action-bar-container">
-                        <ActionBar>
-                            <FastPlayBtn />
+                        <div className="action-bar-container">
+                            <ActionBar>
+                                <FastPlayBtn />
 
-                            <BetDecreaseBtn
-                                onClick={handleDecreaseBet}
-                                winner={winner} />
+                                <BetDecreaseBtn
+                                    onClick={handleDecreaseBet}
+                                    winner={winner} />
 
-                            <RepeatButton
-                                onClick={() => handleSpin(false)}
-                                winner={winner}
-                                autoPlayOn={autoPlayOn}
-                            />
+                                <RepeatButton
+                                    onClick={() => handleSpin(false)}
+                                    winner={winner}
+                                    autoPlayOn={autoPlayOn}
+                                />
 
-                            <BetIncreaseBtn
-                                onClick={handleIncreaseBet} />
+                                <BetIncreaseBtn
+                                    onClick={handleIncreaseBet} />
 
-                            <AutoPlayBtn
-                                onClick={handleAutoPlay} />
-                        </ActionBar>
+                                <AutoPlayBtn
+                                    onClick={handleAutoPlay} />
+                            </ActionBar>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className='alert-container'>
+                <div className={successShow ? "alert-success" : "alert-hidden"}>
+                    <span className={successShow ? "closebtn" : "alert-hidden"} onClick={handleSuccessClose}>&times;</span>
+                    <strong>Success!</strong> Welcome to your sign in.
+                </div>
+                <div className={alertShow ? "alert" : "alert-hidden"}>
+                    <span className={alertShow ? "closebtn" : "alert-hidden"} onClick={handleAlertClose}>&times;</span>
+                    <strong>Warning!</strong> Your Wallet Amount isn't enough.
+                </div>
+            </div>
+        </>
     );
 }
 export default MainContent;

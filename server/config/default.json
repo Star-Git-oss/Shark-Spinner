@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://brightstar09031222:UX3cD4XYydTGlBPw@cluster0.xscjnsa.mongodb.net/",
+  "jwtSecret": "secret"
+}
